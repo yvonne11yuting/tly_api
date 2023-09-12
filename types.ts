@@ -1,5 +1,10 @@
+interface RecordData {
+    question: string;
+    answer: string;
+}
+
 interface ResultResponse {
     code: number;
-    data?: unknown[][] | null;
+    data: RecordData[] | null;
     message: string;
 }

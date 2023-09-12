@@ -26,6 +26,8 @@ function getSheetsData() {
     if (sheets.length === 0 || !sheets[DB_TAB]) {
         throw new Error('SHEET_NOT_FOUND');
     }
-    const data = sheets[DB_TAB].getDataRange().getValues();
-    return data.slice(1); // remove header
+    const rawData = sheets[DB_TAB].getDataRange().getValues();
+    const data = rawData.slice(1); // remove header
+    const formatData = data.map(([question, answer]) => ({ question, answer }));
+    return formatData;
 }
