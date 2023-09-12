@@ -58,7 +58,7 @@ jobs:
 
       - name: Push script to prod
         id: clasp-push
-        run: pnpm push
+        run: pnpm run push
 
       - name: Bump version and push tag
         id: tag_version
