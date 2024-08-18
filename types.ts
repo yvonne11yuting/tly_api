@@ -1,6 +1,7 @@
 interface RecordData {
     question: string;
     answer: string;
+    note?: string;
 }
 
 interface ResultResponse {
